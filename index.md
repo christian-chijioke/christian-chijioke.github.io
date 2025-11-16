@@ -1,6 +1,8 @@
 ---
 layout: home
 title: Welcome
+title: Work Experience
+title: awards
 ---
 
 # Hello, I'm Christian 👋
