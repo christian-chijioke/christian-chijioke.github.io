@@ -1,0 +1,6 @@
+title: My Portfolio
+description: Personal website of Christian Chijioke
+theme: minima
+
+# Optional (makes URLs clean)
+markdown: kramdown
