@@ -62,12 +62,12 @@ section {
 }
 
 #home {
-    background-color: #0a1628;
-    background-image: url('profile.jpg');
-    background-size: contain;
+    background:
+        linear-gradient(rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0.85)),
+        url('profile.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 #projects {
