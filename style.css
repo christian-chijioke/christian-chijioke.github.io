@@ -14,7 +14,7 @@ body {
 /* Navigation */
 #navbar {
     background-color: #001f3f;
-    padding: 25px 0;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -28,11 +28,12 @@ body {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    margin: 0 30px;
-    padding: 10px 20px;
+    margin: 0 25px;
+    padding: 10px 15px;
     transition: color 0.3s;
 }
 
+/* Hover */
 #navbar a:hover {
     color: #4a90e2;
 }
@@ -61,11 +62,12 @@ section {
     align-items: center;
 }
 
+/* HOME SECTION — centered, not stretched */
 #home {
     background:
         linear-gradient(rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0.85)),
         url('profile.jpg');
-    background-size: contain;   /* <–– image will NOT cover screen */
+    background-size: 350px;   /* ***** ADJUST SIZE here ***** */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -86,13 +88,14 @@ section {
     background-color: #0a1628;
 }
 
+/* Typography */
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-bottom: 20px;
 }
 
@@ -101,7 +104,7 @@ p {
     color: #b8b8b8;
 }
 
-/* Contact Section Styling */
+/* Contact Section */
 #contact {
     text-align: center;
 }
@@ -119,7 +122,6 @@ p {
     margin-top: 40px;
 }
 
-/* Contact Form */
 .contact-form {
     flex: 1;
     text-align: left;
@@ -135,7 +137,6 @@ p {
     border-radius: 8px;
     color: #e8e8e8;
     font-size: 1rem;
-    font-family: inherit;
 }
 
 .contact-form input:focus,
@@ -164,7 +165,6 @@ p {
     background-color: #357abd;
 }
 
-/* Contact Details */
 .contact-details {
     flex: 1;
     text-align: left;
@@ -196,9 +196,83 @@ p {
     margin: 0;
 }
 
-/* Responsive Design for Contact */
+/* ---------------------------- */
+/*   RESPONSIVE MEDIA QUERIES   */
+/* ---------------------------- */
+
+/* Tablets & small laptops */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    #home {
+        background-size: 280px;
+    }
+}
+
+/* Mobile screens */
 @media (max-width: 768px) {
+
+    #navbar {
+        padding: 15px 0;
+    }
+
+    #navbar a {
+        margin: 0 12px;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    section {
+        padding: 90px 6%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #home {
+        background-size: 220px;
+    }
+
     .contact-container {
         flex-direction: column;
+    }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+
+    #navbar a {
+        margin: 0 5px;
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #home {
+        background-size: 160px;
     }
 }
