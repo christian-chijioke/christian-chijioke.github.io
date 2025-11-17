@@ -23,6 +23,19 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Footer */
+footer {
+    background-color: #000d1a;
+    text-align: center;
+    padding: 30px 10%;
+    color: #b8b8b8;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0;
+    color: #b8b8b8;
+}
 #navbar a {
     color: #e8e8e8;
     text-decoration: none;
