@@ -33,12 +33,10 @@ body {
     transition: color 0.3s;
 }
 
-/* Hover */
 #navbar a:hover {
     color: #4a90e2;
 }
 
-/* White navbar when scrolling */
 #navbar.scrolled {
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -52,7 +50,7 @@ body {
     color: #4a90e2;
 }
 
-/* Sections */
+/* Sections with different navy shades */
 section {
     min-height: 100vh;
     padding: 120px 10%;
@@ -62,30 +60,24 @@ section {
     align-items: center;
 }
 
-/* HOME SECTION — centered, not stretched */
-#home {
-    background:
-        linear-gradient(rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0.85)),
-        url('profile.jpg');
-    background-size: 350px;   /* ***** ADJUST SIZE here ***** */
-    background-position: center;
-    background-repeat: no-repeat;
+#about {
+    background-color: #0a1628;  /* darkest navy */
 }
 
 #projects {
-    background-color: #0d1b30;
+    background-color: #0d1b30;  /* slightly lighter navy */
+}
+
+#education {
+    background-color: #112244;  /* medium navy */
 }
 
 #awards {
-    background-color: #0a1628;
-}
-
-#about {
-    background-color: #0d1b30;
+    background-color: #0f203d;  /* slightly lighter than projects */
 }
 
 #contact {
-    background-color: #0a1628;
+    background-color: #0a1628;  /* same as about for balance */
 }
 
 /* Typography */
@@ -102,6 +94,23 @@ h2 {
 p {
     font-size: 1.2rem;
     color: #b8b8b8;
+}
+
+/* Education Section Styling */
+.education-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-bottom: 8px;
+}
+
+.education-item p {
+    font-size: 1.1rem;
+    color: #e8e8e8;
 }
 
 /* Contact Section */
@@ -202,77 +211,32 @@ p {
 
 /* Tablets & small laptops */
 @media (max-width: 992px) {
-    h1 {
-        font-size: 2.7rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    #home {
-        background-size: 280px;
-    }
+    h1 { font-size: 2.7rem; }
+    h2 { font-size: 2rem; }
 }
 
 /* Mobile screens */
 @media (max-width: 768px) {
 
-    #navbar {
-        padding: 15px 0;
-    }
+    #navbar { padding: 15px 0; }
+    #navbar a { margin: 0 12px; font-size: 14px; padding: 8px 10px; }
 
-    #navbar a {
-        margin: 0 12px;
-        font-size: 14px;
-        padding: 8px 10px;
-    }
+    section { padding: 90px 6%; }
 
-    section {
-        padding: 90px 6%;
-    }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
 
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    #home {
-        background-size: 220px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-    }
+    .contact-container { flex-direction: column; }
 }
 
 /* Small phones (≤ 480px) */
 @media (max-width: 480px) {
 
-    #navbar a {
-        margin: 0 5px;
-        font-size: 12px;
-        padding: 6px;
-    }
+    #navbar a { margin: 0 5px; font-size: 12px; padding: 6px; }
 
-    section {
-        padding: 70px 5%;
-    }
+    section { padding: 70px 5%; }
 
-    h1 {
-        font-size: 1.9rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    #home {
-        background-size: 160px;
-    }
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.5rem; }
+    p  { font-size: 1rem; }
 }
