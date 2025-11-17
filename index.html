@@ -7,72 +7,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
         <a href="#projects">PROJECTS</a>
         <a href="#awards">AWARDS</a>
-        <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h1>Welcome</h1>
-        <p>This is the home section</p>
+    <!-- ABOUT Section -->
+    <section id="about">
+        <h1>Hello there!</h1>
+        <h2>Welcome to my page</h2>
+        <p>This is the about section</p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- PROJECTS Section -->
     <section id="projects">
         <h2>Projects</h2>
         <p>Your projects will go here</p>
     </section>
 
-    <!-- Awards Section -->
+    <!-- AWARDS Section -->
     <section id="awards">
         <h2>Awards</h2>
         <p>Your awards will go here</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Information about you will go here</p>
-    </section>
+    <!-- CONTACT Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p class="contact-subtitle">Feel free to reach out to me</p>
 
-    <!-- Contact Section -->
-<section id="contact">
-    <h2>Get In Touch</h2>
-    <p class="contact-subtitle">Feel free to reach out to me</p>
-    
-    <div class="contact-container">
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name" id="name">
-            <input type="email" placeholder="Your Email" id="email">
-            <input type="tel" placeholder="Phone Number" id="Phone Number">
-            <textarea placeholder="Your Message" rows="6" id="message"></textarea>
-            <button onclick="sendMessage()">Send Message</button>
+        <div class="contact-container">
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name" id="name">
+                <input type="email" placeholder="Your Email" id="email">
+                <input type="tel" placeholder="Phone Number" id="phone">
+                <textarea placeholder="Your Message" rows="6" id="message"></textarea>
+                <button onclick="sendMessage()">Send Message</button>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h3>My Contact Details</h3>
+                
+                <div class="detail-item">
+                    <strong>EMAIL</strong>
+                    <p>christianchijioke001@gmail.com</p>
+                </div>
+
+                <div class="detail-item">
+                    <strong>PHONE</strong>
+                    <p>+234 905 078 9591</p>
+                </div>
+
+                <div class="detail-item">
+                    <strong>ADDRESS</strong>
+                    <p>Abuja, Nigeria</p>
+                </div>
+            </div>
+
         </div>
-        
-        <!-- Contact Details -->
-        <div class="contact-details">
-            <h3>My Contact Details</h3>
-            <div class="detail-item">
-                <strong>EMAIL</strong>
-                <p>christianchijioke001@gmail.com</p>
-            </div>
-            <div class="detail-item">
-                <strong>PHONE</strong>
-                <p>+234 905 078 9591</p>
-            </div>
-            <div class="detail-item">
-                <strong>ADDRESS</strong>
-                <p>Abuja, Nigeria</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <script src="script.js"></script>
 </body>
