@@ -65,7 +65,7 @@ section {
     background:
         linear-gradient(rgba(10, 22, 40, 0.85), rgba(10, 22, 40, 0.85)),
         url('profile.jpg');
-    background-size: cover;
+    background-size: contain;   /* <–– image will NOT cover screen */
     background-position: center;
     background-repeat: no-repeat;
 }
