@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Amara Osei — Researcher & Engineer</title>
+  <title>Christian Nwankwo Chijioke — Researcher & Data Scientist</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,7 @@
   <!-- ═══════════════ NAV ═══════════════ -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a class="nav-logo" href="#hero">AO<span class="dot">.</span></a>
+      <a class="nav-logo" href="#hero">CNC<span class="dot">.</span></a>
       <button class="burger" id="burger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -32,12 +32,12 @@
   <header id="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow reveal">Researcher · Engineer · Innovator</p>
-      <h1 class="hero-name reveal">Dr. Amara<br /><em>Osei</em></h1>
-      <p class="hero-tagline reveal">Advancing the frontier of AI & computational systems<br />from Abuja to the world.</p>
+      <p class="hero-eyebrow reveal">Researcher · Data Scientist · Innovator</p>
+      <h1 class="hero-name reveal">Christian Nwankwo<br /><em>Chijioke</em></h1>
+      <p class="hero-tagline reveal">Turning data into decisions and research into real-world impact<br />from Abuja to the world.</p>
       <div class="hero-actions reveal">
         <a href="#publications" class="btn-primary">View Research</a>
-        <a href="https://linkedin.com/in/amaraosei" target="_blank" class="btn-ghost">
+        <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" class="btn-ghost">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
           LinkedIn
         </a>
@@ -54,28 +54,34 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-image-wrap reveal">
-          <div class="img-frame">
-            <!-- Replace src with your actual photo -->
+          <div class="img-frame" id="profile-frame">
             <img
+              id="profile-photo"
               src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=600&q=80"
-              alt="Dr. Amara Osei"
+              alt="Christian Nwankwo Chijioke"
               loading="lazy"
             />
+            <!-- Upload overlay -->
+            <label class="photo-upload-overlay" for="photo-upload" title="Upload your photo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <span>Upload Photo</span>
+            </label>
+            <input type="file" id="photo-upload" accept="image/*" style="display:none;" />
           </div>
           <div class="about-social">
-            <a href="https://linkedin.com/in/amaraosei" target="_blank" class="social-pill">
+            <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" class="social-pill">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
-              linkedin.com/in/amaraosei
+              linkedin.com/in/christianchijioke
             </a>
           </div>
         </div>
 
         <div class="about-text reveal">
           <div class="section-label">About Me</div>
-          <h2>Passionate about building intelligent systems that matter.</h2>
-          <p>I am a researcher and engineer specialising in machine learning, distributed computing, and applied AI systems. With over a decade of experience bridging academia and industry, I work on problems at the intersection of technology and real-world impact — particularly within the African context.</p>
-          <p>I hold a Ph.D. in Computer Science from the University of Oxford, where my doctoral thesis explored efficient deep learning architectures for low-resource environments. I am currently an Assistant Professor at the African University of Science & Technology (AUST), Abuja.</p>
-          <p>Beyond research, I mentor early-career engineers across Africa and advocate for inclusive, locally-grounded technology development.</p>
+          <h2>Passionate about turning data into decisions that matter.</h2>
+          <p>I am a researcher, data scientist, and innovator with a deep commitment to solving complex, real-world problems through the power of data and intelligent systems. My work sits at the intersection of machine learning, data analytics, and applied research — with a particular focus on impact-driven solutions for the African context.</p>
+          <p>I bring rigorous analytical thinking to every challenge, whether that means building predictive models, uncovering insights from messy datasets, or translating research findings into actionable strategies for organisations and communities.</p>
+          <p>I am equally passionate about knowledge sharing, mentorship, and building a stronger data science ecosystem across Africa.</p>
           <div class="about-stats">
             <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Years Research</span></div>
             <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Publications</span></div>
@@ -256,9 +262,9 @@
           <div class="section-label">Get In Touch</div>
           <h2>Let's work<br /><em>together.</em></h2>
           <p>Whether you're interested in research collaboration, consulting, speaking engagements, or mentorship — I'd love to hear from you.</p>
-          <a href="https://linkedin.com/in/amaraosei" target="_blank" class="social-pill mt">
+          <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" class="social-pill mt">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
-            linkedin.com/in/amaraosei
+            linkedin.com/in/christianchijioke
           </a>
         </div>
 
@@ -298,9 +304,9 @@
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
     <div class="container footer-inner">
-      <span class="nav-logo">AO<span class="dot">.</span></span>
-      <p>© <span id="year"></span> Dr. Amara Osei. All rights reserved.</p>
-      <a href="https://linkedin.com/in/amaraosei" target="_blank" aria-label="LinkedIn">
+      <span class="nav-logo">CNC<span class="dot">.</span></span>
+      <p>© <span id="year"></span> Christian Nwankwo Chijioke. All rights reserved.</p>
+      <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" aria-label="LinkedIn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
       </a>
     </div>
