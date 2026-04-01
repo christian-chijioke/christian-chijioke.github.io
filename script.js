@@ -1,9 +1,31 @@
 /* ════════════════════════════════════════
-   PORTFOLIO SCRIPT — Dr. Amara Osei
+   PORTFOLIO SCRIPT — Christian Nwankwo Chijioke
    ════════════════════════════════════════ */
 
 // ── Footer year ──
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ── Profile photo upload ──
+const photoInput = document.getElementById('photo-upload');
+const profilePhoto = document.getElementById('profile-photo');
+const imgFrame = document.getElementById('profile-frame');
+
+if (photoInput && profilePhoto) {
+  photoInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+      alert('Please select an image file (JPG, PNG, WebP, etc.)');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      profilePhoto.src = evt.target.result;
+      imgFrame.classList.add('has-photo');
+    };
+    reader.readAsDataURL(file);
+  });
+}
 
 // ── Navbar scroll shadow ──
 const navbar = document.getElementById('navbar');
