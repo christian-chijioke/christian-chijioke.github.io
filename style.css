@@ -258,13 +258,14 @@ section {
   display: grid;
   grid-template-columns: 360px 1fr;
   gap: 5rem;
-  align-items: start;
+  align-items: stretch;
 }
-.about-image-wrap { position: relative; }
+.about-image-wrap { position: relative; display: flex; flex-direction: column; }
 .img-frame {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 3/4;
+  flex: 1;
+  min-height: 480px;
   box-shadow: var(--shadow-lg);
   position: relative;
 }
@@ -296,7 +297,14 @@ section {
 .social-pill:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
 .social-pill.mt { margin-top: 1.6rem; }
 
-/* About text */
+/* Profile image fill */
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
 .section-label {
   font-size: .72rem;
   font-weight: 600;
@@ -574,7 +582,7 @@ footer a:hover { color: var(--white); }
   .card-grid, .awards-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .about-image-wrap { max-width: 320px; margin: 0 auto; }
-  .img-frame { aspect-ratio: 1/1; }
+  .img-frame { aspect-ratio: unset; min-height: 360px; }
   .form-row { grid-template-columns: 1fr; }
   .about-stats { gap: 1.5rem; }
   .contact-form { padding: 1.8rem; }
