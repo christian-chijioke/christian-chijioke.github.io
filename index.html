@@ -8,6 +8,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── additional overrides / fixes ── */
+    .photo-upload-overlay {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(26, 47, 110, 0.85);
+      backdrop-filter: blur(6px);
+      border-radius: 40px;
+      padding: 6px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: background 0.2s ease;
+      z-index: 5;
+      font-family: var(--font-body);
+    }
+    .photo-upload-overlay:hover {
+      background: var(--blue-light);
+    }
+    .img-frame {
+      position: relative;
+    }
+    .social-links-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .social-pill.whatsapp:hover {
+      background: #25D366;
+      border-color: #25D366;
+      color: white;
+    }
+    .whatsapp-icon {
+      fill: currentColor;
+    }
+    .contact-info .social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      width: fit-content;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      background: var(--off-white);
+    }
+    /* small adjustments */
+    @media (max-width: 768px) {
+      .photo-upload-overlay span { display: none; }
+      .photo-upload-overlay { padding: 6px 10px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -34,7 +91,8 @@
     <div class="hero-content">
       <p class="hero-eyebrow reveal">Researcher · Data Scientist · Innovator</p>
       <h1 class="hero-name reveal">Christian Nwankwo<br /><em>Chijioke</em></h1>
-      <p class="hero-tagline reveal">Turning data into decisions and research into real-world impact<br />from Abuja to the world.</p>
+      <!-- updated tagline: In God I trust. All others must bring data. -->
+      <p class="hero-tagline reveal">In God I trust. All others must bring data.</p>
       <div class="hero-actions reveal">
         <a href="#publications" class="btn-primary">View Research</a>
         <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" class="btn-ghost">
@@ -43,10 +101,7 @@
         </a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+    <!-- SCROLL HINT REMOVED completely -->
   </header>
 
   <!-- ═══════════════ ABOUT ═══════════════ -->
@@ -68,12 +123,7 @@
             </label>
             <input type="file" id="photo-upload" accept="image/*" style="display:none;" />
           </div>
-          <div class="about-social">
-            <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" class="social-pill">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
-              linkedin.com/in/christianchijioke
-            </a>
-          </div>
+          <!-- LinkedIn pill removed from underneath profile picture -->
         </div>
 
         <div class="about-text reveal">
@@ -82,11 +132,7 @@
           <p>I am a researcher, data scientist, and innovator with a deep commitment to solving complex, real-world problems through the power of data and intelligent systems. My work sits at the intersection of machine learning, data analytics, and applied research — with a particular focus on impact-driven solutions for the African context.</p>
           <p>I bring rigorous analytical thinking to every challenge, whether that means building predictive models, uncovering insights from messy datasets, or translating research findings into actionable strategies for organisations and communities.</p>
           <p>I am equally passionate about knowledge sharing, mentorship, and building a stronger data science ecosystem across Africa.</p>
-          <div class="about-stats">
-            <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Years Research</span></div>
-            <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Publications</span></div>
-            <div class="stat"><span class="stat-num">12</span><span class="stat-label">Awards</span></div>
-          </div>
+          <!-- STATS (10+ years, publications, awards) REMOVED entirely -->
         </div>
       </div>
     </div>
@@ -97,50 +143,49 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">Research</div>
-        <h2>Selected Publications</h2>
+        <h2>Publications</h2>   <!-- changed from "Selected Publications" -->
       </div>
       <div class="card-grid">
 
+        <!-- Publication 1: no tag (field+year removed), no bottom journal/date, only "Read Paper" -->
         <article class="pub-card reveal">
           <div class="card-img-wrap">
             <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="Neural Architecture" loading="lazy" />
-            <span class="card-tag">Machine Learning · 2024</span>
+            <!-- card-tag removed -->
           </div>
           <div class="card-body">
             <h3>Efficient Neural Architecture Search for Resource-Constrained Devices</h3>
             <p>We introduce ConstrainedNAS, a novel framework for discovering neural network architectures that achieve state-of-the-art accuracy while respecting strict computational budgets — enabling deployment on edge devices prevalent in emerging markets.</p>
             <div class="card-meta">
-              <span>NeurIPS 2024</span>
+              <!-- removed journal/date span -->
               <a href="#" class="read-link">Read Paper →</a>
             </div>
           </div>
         </article>
 
+        <!-- Publication 2 -->
         <article class="pub-card reveal">
           <div class="card-img-wrap">
             <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Distributed Systems" loading="lazy" />
-            <span class="card-tag">Distributed Systems · 2023</span>
           </div>
           <div class="card-body">
             <h3>FedSavanna: Federated Learning Under Intermittent Connectivity in Sub-Saharan Africa</h3>
             <p>This paper presents a federated learning protocol designed to tolerate the high packet-loss rates and intermittent connectivity characteristic of rural African networks, achieving robust model convergence without centralised data collection.</p>
             <div class="card-meta">
-              <span>ICML 2023</span>
               <a href="#" class="read-link">Read Paper →</a>
             </div>
           </div>
         </article>
 
+        <!-- Publication 3 -->
         <article class="pub-card reveal">
           <div class="card-img-wrap">
             <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" alt="NLP Africa" loading="lazy" />
-            <span class="card-tag">NLP · 2022</span>
           </div>
           <div class="card-body">
             <h3>AfroLM: A Self-Supervised Language Model for 25 African Languages</h3>
             <p>We release AfroLM, a multilingual transformer pre-trained on a curated corpus of 25 African languages. AfroLM achieves new benchmarks on downstream NLP tasks while requiring significantly less compute than existing multilingual models.</p>
             <div class="card-meta">
-              <span>ACL 2022</span>
               <a href="#" class="read-link">Read Paper →</a>
             </div>
           </div>
@@ -159,47 +204,45 @@
       </div>
       <div class="card-grid">
 
+        <!-- Project 1: remove top-left field tag, remove year/date from bottom, only "View Project" -->
         <article class="pub-card reveal">
           <div class="card-img-wrap">
             <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="HealthAI" loading="lazy" />
-            <span class="card-tag">Healthcare AI</span>
+            <!-- no card-tag -->
           </div>
           <div class="card-body">
             <h3>NaijaHealth AI — Clinical Decision Support System</h3>
             <p>A diagnostic AI assistant deployed across 14 primary healthcare centres in Nigeria. The system assists clinicians in diagnosing malaria, tuberculosis, and diabetic retinopathy using low-cost smartphone cameras, serving over 40,000 patients to date.</p>
             <div class="card-meta">
-              <span>2023 – Present</span>
               <a href="#" class="read-link">View Project →</a>
             </div>
           </div>
         </article>
 
+        <!-- Project 2 -->
         <article class="pub-card reveal">
           <div class="card-img-wrap">
             <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Solar Grid" loading="lazy" />
-            <span class="card-tag">Energy · IoT</span>
           </div>
           <div class="card-body">
             <h3>GridSense — Predictive Maintenance for Solar Micro-Grids</h3>
             <p>An IoT + ML platform that monitors off-grid solar installations across rural communities, predicting component failures up to 72 hours in advance. Deployed in partnership with the Rural Electrification Agency, reducing downtime by 61%.</p>
             <div class="card-meta">
-              <span>2022 – Present</span>
               <a href="#" class="read-link">View Project →</a>
             </div>
           </div>
         </article>
 
+        <!-- Project 3 -->
         <article class="pub-card reveal">
           <div class="card-img-wrap">
             <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80" alt="Open Source" loading="lazy" />
-            <span class="card-tag">Open Source</span>
           </div>
           <div class="card-body">
             <h3>AfricaML Toolkit — Open-Source Low-Compute ML Library</h3>
             <p>A Python library providing efficient, well-documented implementations of classical and modern ML algorithms optimised for low-RAM environments. Actively maintained with 2,800+ GitHub stars and used by researchers in 30+ countries.</p>
             <div class="card-meta">
-              <span>2021 – Present</span>
-              <a href="#" class="read-link">View on GitHub →</a>
+              <a href="#" class="read-link">View Project →</a>
             </div>
           </div>
         </article>
@@ -216,7 +259,6 @@
         <h2>Awards & Honours</h2>
       </div>
       <div class="awards-grid">
-
         <div class="award-card reveal">
           <div class="award-img-wrap">
             <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&q=80" alt="Award trophy" loading="lazy" />
@@ -249,7 +291,6 @@
             <p>AfroLM received the Best Paper Award at the Association for Computational Linguistics Annual Meeting, recognising its scientific rigor and broad societal impact.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -261,14 +302,26 @@
         <div class="contact-info reveal">
           <div class="section-label">Get In Touch</div>
           <h2>Let's work<br /><em>together.</em></h2>
-          <p>Whether you're interested in research collaboration, consulting, speaking engagements, or mentorship — I'd love to hear from you.</p>
-          <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" class="social-pill mt">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
-            linkedin.com/in/christianchijioke
-          </a>
+          <!-- updated description text -->
+          <p>Whether you are interested in research collaboration, consulting, data science or AI projects - I would love to hear from you.</p>
+          <!-- LinkedIn pill (kept) + new WhatsApp pill underneath -->
+          <div class="social-links-row">
+            <a href="https://www.linkedin.com/in/christianchijioke/" target="_blank" class="social-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
+              linkedin.com/in/christianchijioke
+            </a>
+            <!-- WhatsApp link added exactly as requested -->
+            <a href="https://wa.link/rk17cc" target="_blank" class="social-pill whatsapp">
+              <svg class="whatsapp-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.45-4.45-9.9-9.91-9.9zm5.29 14.05c-.3.84-1.76 1.54-2.42 1.61-.64.06-1.34.1-2.12-.4-.96-.61-2.12-2.23-2.71-2.99-.19-.25-.42-.6-.42-1.02s.23-.78.41-1.03c.18-.25.4-.42.57-.67.18-.25.24-.42.36-.7.12-.28.06-.52-.03-.73-.09-.21-1.1-2.65-1.51-3.63-.39-.94-.79-.82-1.09-.84-.26-.02-.56-.02-.86-.02-.3 0-.78.11-1.19.55-.41.44-1.56 1.53-1.56 3.73 0 2.2 1.6 4.33 1.82 4.63.22.3 3.14 4.79 7.6 6.71 1.06.46 1.89.73 2.54.93.78.3 1.49.26 2.06.16.56-.1 1.76-.72 2.01-1.42.25-.7.25-1.3.18-1.43-.07-.13-.27-.21-.57-.36-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.78.97-.96 1.17-.18.2-.36.23-.66.08-.3-.15-1.27-.47-2.42-1.5-.89-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-1.36-3.27-1.86-4.48-.19-.44-.38-.38-.52-.38-.13 0-.28-.02-.43-.02-.15 0-.4.06-.61.28-.21.22-.8.79-.8 1.93 0 1.14.83 2.24.95 2.39.12.15 1.64 2.51 3.98 3.52.56.24 1 .38 1.34.49.56.18 1.08.16 1.49.09.42-.07 1.3-.53 1.48-1.05.18-.52.18-.97.13-1.06-.05-.09-.19-.15-.41-.25z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
         </div>
 
-        <form class="contact-form reveal" id="contact-form" novalidate>
+        <!-- FORM: updated endpoint (Formspree), subject field is now text input (free text) instead of dropdown -->
+        <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/xbdpkdqq" method="POST" novalidate>
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name</label>
@@ -279,16 +332,10 @@
               <input type="email" id="email" name="email" placeholder="jane@example.com" required />
             </div>
           </div>
+          <!-- subject field: free text input (no dropdown) -->
           <div class="form-group">
             <label for="subject">Subject</label>
-            <select id="subject" name="subject">
-              <option value="">Select a topic…</option>
-              <option>Research Collaboration</option>
-              <option>Consulting</option>
-              <option>Speaking Engagement</option>
-              <option>Mentorship</option>
-              <option>Other</option>
-            </select>
+            <input type="text" id="subject" name="subject" placeholder="How can I help you? Research, collaboration, speaking..." required />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
@@ -312,6 +359,165 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    /* ════════════════════════════════════════
+       PORTFOLIO SCRIPT — Christian Nwankwo Chijioke (updated)
+       ════════════════════════════════════════ */
+
+    // ── Footer year ──
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Navbar scroll shadow ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── Mobile burger menu ──
+    const burger    = document.getElementById('burger');
+    const navLinks  = document.getElementById('nav-links');
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        burger.classList.toggle('open', isOpen);
+        burger.setAttribute('aria-expanded', isOpen);
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          burger.classList.remove('open');
+          burger.setAttribute('aria-expanded', false);
+        });
+      });
+    }
+
+    // ── Scroll reveal (same elegant staggered effect) ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const siblings = Array.from(entry.target.parentElement?.querySelectorAll('.reveal') || []);
+          const idx = siblings.indexOf(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, idx * 90);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── Active nav link on scroll ──
+    const sections   = document.querySelectorAll('section[id], header[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navAnchors.forEach(a => {
+            a.style.color = '';
+            if (a.getAttribute('href') === `#${id}`) {
+              a.style.color = 'var(--blue)';
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // ── Contact form: native Formspree endpoint (no simulation, real submission)
+    const form     = document.getElementById('contact-form');
+    const formNote = document.getElementById('form-note');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name    = form.name.value.trim();
+        const email   = form.email.value.trim();
+        const subject = form.subject.value.trim();
+        const message = form.message.value.trim();
+
+        if (!name || !email || !subject || !message) {
+          formNote.textContent = 'Please fill in all fields (name, email, subject, message).';
+          formNote.style.color = '#c0392b';
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          formNote.textContent = 'Please enter a valid email address.';
+          formNote.style.color = '#c0392b';
+          return;
+        }
+
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        formNote.textContent = '';
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            formNote.textContent = '✓ Thank you! Your message has been sent. I\'ll be in touch soon.';
+            formNote.style.color = 'var(--blue-light)';
+            form.reset();
+          } else {
+            const data = await response.json();
+            if (data.errors) {
+              formNote.textContent = data.errors.map(e => e.message).join(', ');
+            } else {
+              formNote.textContent = 'Oops! Something went wrong. Please try again later.';
+            }
+            formNote.style.color = '#c0392b';
+          }
+        } catch (err) {
+          formNote.textContent = 'Network error. Please check your connection and try again.';
+          formNote.style.color = '#c0392b';
+        } finally {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }
+      });
+    }
+
+    // ── Smooth-scroll for same-page anchors (with offset) ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const targetId = anchor.getAttribute('href');
+        if (targetId === "#" || targetId === "") return;
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const offset = navbar?.offsetHeight + 16 || 88;
+          const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ── Photo upload functionality (kept for customisation) ──
+    const photoUpload = document.getElementById('photo-upload');
+    const profileImg = document.getElementById('profile-photo');
+    if (photoUpload && profileImg) {
+      photoUpload.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = (ev) => {
+            profileImg.src = ev.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+      const uploadLabel = document.querySelector('.photo-upload-overlay');
+      if (uploadLabel) {
+        uploadLabel.addEventListener('click', (e) => {
+          e.preventDefault();
+          photoUpload.click();
+        });
+      }
+    }
+  </script>
 </body>
 </html>
