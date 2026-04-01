@@ -1,44 +1,311 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Chijioke</title>
-    <link rel="stylesheet" href = "style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Amara Osei — Researcher & Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class = "nav">
-        <a href = "#">Home</a>
-        <a href = "#">About</a>
-        <a href = "#">Projects</a>
-        <a href = "#">Awards</a>
-        <a href = "#">Get In Touch</a>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">AO<span class="dot">.</span></a>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
     </div>
-    <div class = "profile-image">
-        <img src = "framed_photo.png" alt = "profile picture">
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <header id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Researcher · Engineer · Innovator</p>
+      <h1 class="hero-name reveal">Dr. Amara<br /><em>Osei</em></h1>
+      <p class="hero-tagline reveal">Advancing the frontier of AI & computational systems<br />from Abuja to the world.</p>
+      <div class="hero-actions reveal">
+        <a href="#publications" class="btn-primary">View Research</a>
+        <a href="https://linkedin.com/in/amaraosei" target="_blank" class="btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
+          LinkedIn
+        </a>
+      </div>
     </div>
-    <div class = "header-text">
-        <h1>About</h1>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
-    <p class = "a-short-bio">
-        Most of the people who have worked with Christian Nwankwo Chijioke describe him as a highly driven professional known for his all-or-nothing approach to work. When he commits to a goal, he pursues it with full focus and intensity. His eyes always seem to light up with excitement during discussions revolving around artificial intelligence, machine learning, and data.
-    </p>
-    <p class = "b-short-bio">
-        He holds a Bachelor of Science degree in Computer Science from the University of Abuja, where he graduated as the Best Student in the Computer Science Department. Since then, Christian has worn several hats in the landscape of data, contributing to organisations such as the National Centre for Artificial Intelligence and Robotics, Namla Educational Limited, the University of Abuja, and the Federal Airports Authority of Nigeria.
-    </p>
-    <p class = "c-short-bio">
-        Currently, he works as a Business Analyst and Consultant at Seagold Information Technology Services Limited. In this role, he is a member of the project team delivering a Bill & Melinda Gates Foundation-sponsored initiative at the National Agency for Food and Drugs Administration and Control (NAFDAC), Nigeria. He collaborates with developers and fellow analysts to develop a software solution aimed at eliminating the circulation of falsified products, while supporting Nigeria’s journey towards attaining Maturity Level 4 of the WHO Global Benchmarking Tool.
-    </p>
-    <p class = "d-short-bio">
-        Beyond his professional work, Christian is actively developing a data-driven solution to address the inefficiencies in the Nigerian public transport system. He is also part of a team working to optimise the National Youth Service Corps (NYSC) programme, with sponsorship support from the National Information Technology Development Agency (NITDA), an agency under the Ministry of Communications, Innovation and Digital Economy.
-    </p>
-    <h1 class = "project">
-        Projects
-    </h1>
-    <div class = "project-section">
-        <div class = "project-one">
-            image src = "project-one-photo" alt = "project photo"
+  </header>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="img-frame">
+            <!-- Replace src with your actual photo -->
+            <img
+              src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=600&q=80"
+              alt="Dr. Amara Osei"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-social">
+            <a href="https://linkedin.com/in/amaraosei" target="_blank" class="social-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
+              linkedin.com/in/amaraosei
+            </a>
+          </div>
         </div>
+
+        <div class="about-text reveal">
+          <div class="section-label">About Me</div>
+          <h2>Passionate about building intelligent systems that matter.</h2>
+          <p>I am a researcher and engineer specialising in machine learning, distributed computing, and applied AI systems. With over a decade of experience bridging academia and industry, I work on problems at the intersection of technology and real-world impact — particularly within the African context.</p>
+          <p>I hold a Ph.D. in Computer Science from the University of Oxford, where my doctoral thesis explored efficient deep learning architectures for low-resource environments. I am currently an Assistant Professor at the African University of Science & Technology (AUST), Abuja.</p>
+          <p>Beyond research, I mentor early-career engineers across Africa and advocate for inclusive, locally-grounded technology development.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Years Research</span></div>
+            <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Publications</span></div>
+            <div class="stat"><span class="stat-num">12</span><span class="stat-label">Awards</span></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- ═══════════════ PUBLICATIONS ═══════════════ -->
+  <section id="publications" class="alt-bg">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Research</div>
+        <h2>Selected Publications</h2>
+      </div>
+      <div class="card-grid">
+
+        <article class="pub-card reveal">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="Neural Architecture" loading="lazy" />
+            <span class="card-tag">Machine Learning · 2024</span>
+          </div>
+          <div class="card-body">
+            <h3>Efficient Neural Architecture Search for Resource-Constrained Devices</h3>
+            <p>We introduce ConstrainedNAS, a novel framework for discovering neural network architectures that achieve state-of-the-art accuracy while respecting strict computational budgets — enabling deployment on edge devices prevalent in emerging markets.</p>
+            <div class="card-meta">
+              <span>NeurIPS 2024</span>
+              <a href="#" class="read-link">Read Paper →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card reveal">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Distributed Systems" loading="lazy" />
+            <span class="card-tag">Distributed Systems · 2023</span>
+          </div>
+          <div class="card-body">
+            <h3>FedSavanna: Federated Learning Under Intermittent Connectivity in Sub-Saharan Africa</h3>
+            <p>This paper presents a federated learning protocol designed to tolerate the high packet-loss rates and intermittent connectivity characteristic of rural African networks, achieving robust model convergence without centralised data collection.</p>
+            <div class="card-meta">
+              <span>ICML 2023</span>
+              <a href="#" class="read-link">Read Paper →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card reveal">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" alt="NLP Africa" loading="lazy" />
+            <span class="card-tag">NLP · 2022</span>
+          </div>
+          <div class="card-body">
+            <h3>AfroLM: A Self-Supervised Language Model for 25 African Languages</h3>
+            <p>We release AfroLM, a multilingual transformer pre-trained on a curated corpus of 25 African languages. AfroLM achieves new benchmarks on downstream NLP tasks while requiring significantly less compute than existing multilingual models.</p>
+            <div class="card-meta">
+              <span>ACL 2022</span>
+              <a href="#" class="read-link">Read Paper →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Work</div>
+        <h2>Selected Projects</h2>
+      </div>
+      <div class="card-grid">
+
+        <article class="pub-card reveal">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="HealthAI" loading="lazy" />
+            <span class="card-tag">Healthcare AI</span>
+          </div>
+          <div class="card-body">
+            <h3>NaijaHealth AI — Clinical Decision Support System</h3>
+            <p>A diagnostic AI assistant deployed across 14 primary healthcare centres in Nigeria. The system assists clinicians in diagnosing malaria, tuberculosis, and diabetic retinopathy using low-cost smartphone cameras, serving over 40,000 patients to date.</p>
+            <div class="card-meta">
+              <span>2023 – Present</span>
+              <a href="#" class="read-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card reveal">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Solar Grid" loading="lazy" />
+            <span class="card-tag">Energy · IoT</span>
+          </div>
+          <div class="card-body">
+            <h3>GridSense — Predictive Maintenance for Solar Micro-Grids</h3>
+            <p>An IoT + ML platform that monitors off-grid solar installations across rural communities, predicting component failures up to 72 hours in advance. Deployed in partnership with the Rural Electrification Agency, reducing downtime by 61%.</p>
+            <div class="card-meta">
+              <span>2022 – Present</span>
+              <a href="#" class="read-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card reveal">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80" alt="Open Source" loading="lazy" />
+            <span class="card-tag">Open Source</span>
+          </div>
+          <div class="card-body">
+            <h3>AfricaML Toolkit — Open-Source Low-Compute ML Library</h3>
+            <p>A Python library providing efficient, well-documented implementations of classical and modern ML algorithms optimised for low-RAM environments. Actively maintained with 2,800+ GitHub stars and used by researchers in 30+ countries.</p>
+            <div class="card-meta">
+              <span>2021 – Present</span>
+              <a href="#" class="read-link">View on GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ AWARDS ═══════════════ -->
+  <section id="awards" class="alt-bg">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Recognition</div>
+        <h2>Awards & Honours</h2>
+      </div>
+      <div class="awards-grid">
+
+        <div class="award-card reveal">
+          <div class="award-img-wrap">
+            <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&q=80" alt="Award trophy" loading="lazy" />
+          </div>
+          <div class="award-body">
+            <span class="award-year">2024</span>
+            <h3>MIT Technology Review — Innovators Under 35 Africa</h3>
+            <p>Named one of Africa's most promising innovators for contributions to healthcare AI and federated learning research under resource-constrained settings.</p>
+          </div>
+        </div>
+
+        <div class="award-card reveal">
+          <div class="award-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=400&q=80" alt="Research grant" loading="lazy" />
+          </div>
+          <div class="award-body">
+            <span class="award-year">2023</span>
+            <h3>Google Research Award — Africa Focused Research</h3>
+            <p>Received a competitive research grant from Google to advance multilingual NLP for African languages and deploy models in low-bandwidth environments.</p>
+          </div>
+        </div>
+
+        <div class="award-card reveal">
+          <div class="award-img-wrap">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80" alt="Best paper" loading="lazy" />
+          </div>
+          <div class="award-body">
+            <span class="award-year">2022</span>
+            <h3>Best Paper Award — ACL 2022</h3>
+            <p>AfroLM received the Best Paper Award at the Association for Computational Linguistics Annual Meeting, recognising its scientific rigor and broad societal impact.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-info reveal">
+          <div class="section-label">Get In Touch</div>
+          <h2>Let's work<br /><em>together.</em></h2>
+          <p>Whether you're interested in research collaboration, consulting, speaking engagements, or mentorship — I'd love to hear from you.</p>
+          <a href="https://linkedin.com/in/amaraosei" target="_blank" class="social-pill mt">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
+            linkedin.com/in/amaraosei
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic…</option>
+              <option>Research Collaboration</option>
+              <option>Consulting</option>
+              <option>Speaking Engagement</option>
+              <option>Mentorship</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full">Send Message</button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="nav-logo">AO<span class="dot">.</span></span>
+      <p>© <span id="year"></span> Dr. Amara Osei. All rights reserved.</p>
+      <a href="https://linkedin.com/in/amaraosei" target="_blank" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
