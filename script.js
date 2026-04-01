@@ -1,31 +1,9 @@
 /* ════════════════════════════════════════
-   PORTFOLIO SCRIPT — Christian Nwankwo Chijioke
+   PORTFOLIO SCRIPT — Dr. Amara Osei
    ════════════════════════════════════════ */
 
 // ── Footer year ──
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// ── Profile photo upload ──
-const photoInput = document.getElementById('photo-upload');
-const profilePhoto = document.getElementById('profile-photo');
-const imgFrame = document.getElementById('profile-frame');
-
-if (photoInput && profilePhoto) {
-  photoInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    if (!file.type.startsWith('image/')) {
-      alert('Please select an image file (JPG, PNG, WebP, etc.)');
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = (evt) => {
-      profilePhoto.src = evt.target.result;
-      imgFrame.classList.add('has-photo');
-    };
-    reader.readAsDataURL(file);
-  });
-}
 
 // ── Navbar scroll shadow ──
 const navbar = document.getElementById('navbar');
@@ -89,11 +67,11 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-// ── Contact form ──
+// ── Contact form (Formspree) ──
 const form     = document.getElementById('contact-form');
 const formNote = document.getElementById('form-note');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name    = form.name.value.trim();
@@ -112,18 +90,32 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  // Simulate submission (replace with your own backend / Formspree / EmailJS)
   const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Sending…';
   btn.disabled    = true;
 
-  setTimeout(() => {
-    formNote.textContent = '✓ Thank you! Your message has been received. I\'ll be in touch soon.';
-    formNote.style.color = 'var(--blue-light)';
-    form.reset();
-    btn.textContent = 'Send Message';
-    btn.disabled    = false;
-  }, 1400);
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      formNote.textContent = '✓ Thank you! Your message has been received. I\'ll be in touch soon.';
+      formNote.style.color = 'var(--blue-light)';
+      form.reset();
+    } else {
+      formNote.textContent = 'Oops! Something went wrong. Please try again or reach out via LinkedIn.';
+      formNote.style.color = '#c0392b';
+    }
+  } catch (err) {
+    formNote.textContent = 'Network error. Please check your connection and try again.';
+    formNote.style.color = '#c0392b';
+  }
+
+  btn.textContent = 'Send Message';
+  btn.disabled    = false;
 });
 
 // ── Smooth-scroll for same-page anchors ──
