@@ -274,7 +274,33 @@ section {
   inset: 0;
   border-radius: var(--radius-lg);
   box-shadow: inset 0 0 0 1.5px rgba(26,47,110,.1);
+  pointer-events: none;
+  z-index: 2;
 }
+
+/* Photo upload overlay */
+.photo-upload-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 30, 77, 0.58);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 3;
+  border-radius: var(--radius-lg);
+}
+.photo-upload-overlay svg { stroke: #fff; width: 26px; height: 26px; }
+.img-frame:hover .photo-upload-overlay { opacity: 1; }
+
 .about-social {
   margin-top: 1.4rem;
   display: flex;
